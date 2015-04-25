@@ -1,6 +1,4 @@
 # aster-parse-babel
-[![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
 
 > Parse babel with aster.
 
