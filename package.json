@@ -1,0 +1,29 @@
+{
+  "name": "aster-parse-babel",
+  "version": "0.0.1",
+  "description": "Parse ES6 useing babel with aster.",
+  "author": "othree <othree@gmail.com> (https://github.com/othree)",
+  "repository": "othree/aster-parse-babel",
+  "license": "MIT",
+  "keywords": [
+    "aster-plugin",
+    "ast",
+    "javascript",
+    "transform",
+    "modify",
+    "es6",
+    "babel"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "rx": "^2.2.0",
+    "babel-core": "^5.1.11"
+  }
+}
