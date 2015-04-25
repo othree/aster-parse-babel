@@ -1,16 +1,22 @@
 'use strict';
 
-module.exports = function (options) {
-	// perform options-dependent initialization here so it could be reused later
-	// (refers to merging with default options, creating helper objects etc.)
-	var stringOption = options.stringOption || 'defaultValue';
+var parse = require('babel-core').transform;
 
-	return function (files) {
-		// process Rx.Observable of AST nodes passed with wrapper {type: 'File', program: <Program AST node>, loc: {source: <fileName>}};
-		// preserve this wrapper as-is unless you are generating new file(s)
-		return files.do(function (file) {
-			// modify program node of each passed file here
-			file.program = file.program;
-		});
-	}
+module.exports = function (options) {
+  options = options || {};
+
+  return function (files) {
+    return files.map(function (file) {
+      var result = parse(file.contents, options);
+
+      return {
+        type: 'File',
+        program: result.ast,
+        loc: {
+          source: file.path
+        }
+      };
+    });
+  };
 };
+
