@@ -1,6 +1,6 @@
 {
   "name": "aster-parse-babel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Parse ES6 useing babel with aster.",
   "author": "othree <othree@gmail.com> (https://github.com/othree)",
   "repository": "othree/aster-parse-babel",
