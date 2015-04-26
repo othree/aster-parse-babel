@@ -1,6 +1,6 @@
 # aster-parse-babel
 
-> Parse babel with aster.
+> Aster parse ES6 with babel.
 
 ## Usage
 
@@ -10,28 +10,13 @@ First, install `aster-parse-babel` as a development dependency:
 npm install --save-dev aster-parse-babel
 ```
 
-Then, add it to your build script:
+Then, register it to your build script:
 
 ```javascript
-var aster = require('aster');
-var parseBabel = require('aster-parse-babel');
+var aster = require("aster");
 
-aster.src('src/**/*.js')
-.map(parseBabel({
-  stringOption: 'value'
-}))
-.map(aster.dest('dist'))
-.subscribe(aster.runner);
+aster.src.registerParser('.js', require('aster-parse-babel'));
 ```
-
-## API
-
-### parseBabel(options)
-
-#### options.stringOption
-Type: `String`
-
-Some string option.
 
 ## License
 
